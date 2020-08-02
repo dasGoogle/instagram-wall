@@ -1,0 +1,23 @@
+{
+  "name": "instgram-wall",
+  "version": "0.0.1",
+  "description": "Open source social wall that displays instagram posts by hashtag",
+  "main": "app.js",
+  "author": "dasGoogle",
+  "license": "MIT",
+  "homepage": "https://github.com/dasGoogle/instagram-wall",
+  "scripts": {
+    "start": "node ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dasGoogle/instagram-wall"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.6.0",
+    "lodash": "^4.17.5"
+  }
+}
