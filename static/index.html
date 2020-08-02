@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Posts</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="grey darken-3" style="overflow: hidden">
+    <div id="app">
+        <nav>
+            <div class="nav-wrapper deep-orange">
+                <a href="#" class="brand-logo" style="margin-left: 30px">{{hashtag}}</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li v-for="link in links"><a v-bind:href="link.href">{{link.name}}</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col s12" :class="post.class" v-for="post in posts" v-bind:key="post.post_url">
+                <div class="card black">
+                    <div class="card-image insta waves-effect waves-block waves-light">
+                        <img class="activator card-image-file" :src="post.image">
+                        <div class="card-chip">
+                            <div class="chip white-text">
+                                <img :src="post.owner.profile_pic_url" style="width: 32px" alt="Contact Person">
+                                {{post.owner.full_name}}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card-reveal black-trans white-text limit" v-bind:class="{ activated: post.active }">
+                        <span class=" card-title ">{{post.owner.full_name}} <span
+                                class="grey-text ">{{post.timestamp | timeBack}}</span></span>
+                        <p class="caption-text limit ">{{ post.caption | truncate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js "></script>
+    <script src="script.js "></script>
+</body>
+
+</html>

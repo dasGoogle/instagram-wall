@@ -1,0 +1,91 @@
+.insta .card-image-file {
+    position: absolute !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.profile-img {
+    height: 24px;
+    width: 24px;
+    margin: 10px;
+}
+
+.insta:after {
+    content: "";
+    display: block;
+    margin-bottom: 100%;
+}
+
+.chip {
+    margin: 12px;
+    z-index: -1 !important;
+    background-color: #0000007c !important;
+    backdrop-filter: blur(10px);
+}
+
+.chip img {
+    border-radius: 50% !important;
+    z-index: 1 !important;
+}
+
+.card-chip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.black-trans {
+    background-color: #0000007c !important;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: opacity 1s ease;
+    display: block !important;
+    transform: translateY(-100%) !important;
+    opacity: 0;
+}
+
+.activated {
+    opacity: 1;
+}
+
+.limit {
+    overflow: hidden !important;
+}
+
+.col {
+    transition: width 2s, position 2s;
+}
+
+.caption-text {
+    font-size: 3em;
+    text-align: center;
+}
+
+.l1 .caption-text {
+    display: none;
+}
+
+#calendarframe {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+.card.horizontal .card-image img {
+    max-height: 100%;
+}
+
+.card.horizontal .card-image {}
+
+.card.horizontal {
+    height: 300px !important;
+}
+
+.frame-card {
+    padding-bottom: 0 !important;
+    padding-top: 10px !important;
+}
